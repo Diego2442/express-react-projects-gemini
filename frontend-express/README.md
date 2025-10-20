@@ -1,4 +1,4 @@
-```markdown
+
 # Frontend - Gestor de Proyectos
 
 ## 🎯 Descripción
