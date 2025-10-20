@@ -1,0 +1,17 @@
+version: '3.9'
+
+services: 
+  my-web-express-gemini:
+    container_name: my-web-express-gemini
+    restart: unless-stopped
+    build: 
+      context: .
+    ports:
+      - "4000:4000"
+    env_file: .env
+    networks:
+      - prueba-gemini
+  
+networks:
+  prueba-gemini:
+    external: true

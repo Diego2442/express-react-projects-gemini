@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  my-front-vite:
+    container_name: my-front-vite
+    build:
+      context: ./
+    ports:
+      - "3000:80"   # Mapeamos puerto local 4173 al 80 del contenedor (Nginx)
+    restart: unless-stopped
+    networks:
+      - prueba-gemini
+
+networks:
+  prueba-gemini:
+    external: true
